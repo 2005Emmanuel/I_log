@@ -136,3 +136,7 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 PYTHON_VERSION = 3.7
+CSRF_TRUSTED_ORIGINS = [
+    "https://ilog-production.up.railway.app/",
+    "https://ilog-production.up.railway.app/",
+    ]
