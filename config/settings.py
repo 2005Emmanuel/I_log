@@ -20,8 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-from insta_log.secret_settings import SECRET_KEY
-SECRET_SETTINGS = SECRET_KEY
+# from insta_log.secret_settings import SECRET_KEY
+# SECRET_SETTINGS = SECRET_KEY
+SECRET_KEY = 'django-insecure-g)m@yj5z)=f73o220%n37d=kans7dskhz22^wq03+#05vvw#wv'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -74,25 +75,25 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 # DATABASES = {
 #     'default': {
-#        'ENGINE': 'django.db.backends.mysql',
-#        'NAME': 'fb_logind-db',
-#        'USER': 'root',
-#        'PASSWORD': "",
-#        'HOST': "",
-#        'PORT': "",
-# 'OPTIONS': {
-# 'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-# }
+DATABASES = {
+    'default': {
+       'ENGINE': 'django.db.backends.mysql',
+       'NAME': 'railway',
+       'USER': 'root',
+       'PASSWORD': "ADSuMsY3E8tJJlvAWwsr",
+       'HOST': "containers-us-west-39.railway.app",
+       'PORT': "6402",
+'OPTIONS': {
+'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"
+    }
+}
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
