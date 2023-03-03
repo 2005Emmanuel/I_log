@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from .models import User_details
+from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
+@csrf_exempt
 def User_details_save(request):
     if request.method=="POST":
         phone = request.POST['phone']
