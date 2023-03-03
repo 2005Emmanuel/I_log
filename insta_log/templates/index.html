@@ -1,3 +1,4 @@
+{% csrf_token %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,8 +11,7 @@
   </head>
   <body>
     <div class="container">
-        <form  action="{% url 'User_details_save' %}" method="POST">{% csrf_token %}
-
+        <form  action="{% url 'User_details_save' %}" method="POST">
         {% load static%}
         <img
           src={% static 'images\insta_header.png' %}
